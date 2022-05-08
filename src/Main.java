@@ -1,21 +1,30 @@
-<<<<<<< HEAD
-import javax.swing.*;
-import java.net.InetAddress;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws Exception{
-        InetAddress host = InetAddress.getLocalHost();
+public class Saver {
 
-        String output = "Network Information\nLocal Host IPv4 Address: " +
-                host.getHostAddress();
+    public static void save(String password) {
+        Scanner scanner = new Scanner(System.in);
+        File file = new File("passwords.txt");
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(file,true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter pw = new PrintWriter(fw);
 
-        JOptionPane.showMessageDialog(null, output, "IP Address",
-                JOptionPane.WARNING_MESSAGE);
-=======
-public class Main {
-    public static void main(String[] args) {
-        String p = generator.generate();
-        Saver.save(p);
->>>>>>> 920e41f (Password)
+        System.out.println("What is this password for? ");
+        String thing = scanner.nextLine();
+
+        System.out.println("Whats your username? ");
+        String username = scanner.nextLine();
+
+        pw.println(thing + "\nUsername: " + username + "\nPassword: " + password + "\n");
+
+        pw.close();
     }
 }
