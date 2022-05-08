@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/IpPuller.iml" filepath="$PROJECT_DIR$/IpPuller.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Password Generator.iml" filepath="$PROJECT_DIR$/Password Generator.iml" />
+>>>>>>> 920e41f (Password)
     </modules>
   </component>
 </project>
